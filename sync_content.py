@@ -29,8 +29,8 @@ SUPABASE_URL = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
 
 POLL_INTERVAL = 30
 POLL_TIMEOUT = 900
-MIN_ER = 0.03
-MIN_COMMENTS = 50
+MIN_ER = 0.0001  # TEMP: lowered for pipeline smoke test, restore to 0.03
+MIN_COMMENTS = 1  # TEMP: lowered for pipeline smoke test, restore to 50
 MAX_ROWS = 1500          # keep the baked dashboard payload light
 PROTECTED = ("拍摄中", "已处理")
 
